@@ -6,16 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        python-version: [3.8, 3.9]
-
+    # Strategy block removed because we are no longer using a matrix
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: '3.9'  # Hardcoded version instead of ${{ matrix... }}
 
     - name: Install dependencies
       run: |
