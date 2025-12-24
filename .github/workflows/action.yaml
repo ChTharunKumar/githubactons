@@ -22,5 +22,5 @@ jobs:
 
     - name: Run tests
       run: |
-        cd src
+        cd codefolder
         python -m pytest addition.py
